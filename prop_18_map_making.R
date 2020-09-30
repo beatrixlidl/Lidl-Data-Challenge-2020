@@ -1,4 +1,3 @@
-setwd("~/Documents/data_project_2020")
 # load packages
 library(tidyverse)
 library(janitor)
@@ -62,7 +61,7 @@ voter_r_2018 <- voter_r_2018 %>%
   mutate( dem_pct = voter_r_2018$Democratic/voter_r_2018$`Total Registered`,
           repub_pct = voter_r_2018$Republican/voter_r_2018$`Total Registered`)
 
-# add to geometries dataset
+# add Democratic/Republican % to geometries dataset
 voter_r_2018 <- voter_r_2018 %>% 
   rename(NAME = County)
 tocounties2 <- voter_r_2018 %>% 
@@ -87,8 +86,37 @@ tm_shape(counties) +
               title = "Legend") +
   tm_layout(legend.outside = TRUE, main.title = "% of voters registered as Republican")
 
+# load 2018 pre registration data
+pre_reg_2018 <- read_csv("pre_reg_2018.csv")
 
+# create percentage of Democratic voters and Republican voters in pre-registration
+pre_reg_2018 <-pre_reg_2018 %>% 
+  mutate( dem_pre_pct = pre_reg_2018$Democratic/pre_reg_2018$`Total
+Pre-Registered`,
+          repub_pre_pct = pre_reg_2018$Republican/pre_reg_2018$`Total
+Pre-Registered`)
+
+# add pre-registered % to geometries dataset
+pre_reg_2018 <- pre_reg_2018 %>% 
+  rename(NAME = County)
+tocounties3 <- pre_reg_2018 %>% 
+  select(NAME, dem_pre_pct, repub_pre_pct)
+counties <- merge(counties, tocounties3, by = "NAME", all.x = TRUE)
   
-  
-  
-  
+# map Democrat pre %
+tmap_mode("plot") 
+tm_shape(counties) +
+  tm_polygons("dem_pre_pct", id = "County",
+              palette = "Blues", style = "fixed",
+              breaks = c(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55, 0.6),
+              title = "Legend") +
+  tm_layout(legend.outside = TRUE, main.title = "% of pre-registered registered as Democrat")
+
+# map Republican pre %
+tmap_mode("plot") 
+tm_shape(counties) +
+  tm_polygons("repub_pre_pct", id = "County",
+              palette = "Reds", style = "fixed",
+              breaks = c(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55, 0.6),
+              title = "Legend") +
+  tm_layout(legend.outside = TRUE, main.title = "% of pre-registered registered as Republican")
