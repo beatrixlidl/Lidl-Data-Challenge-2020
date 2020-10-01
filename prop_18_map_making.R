@@ -10,11 +10,7 @@ counties <- counties %>%
   rename(County = NAMELSAD)
 
 # load population data and clean
-age_data <- read_csv("p2_Age_1yr_Nosup.csv")
-age_data <- row_to_names(age_data, row_number = 2)
-age_data$Age <- as.numeric(as.character(age_data$Age))
-age_data <- age_data %>% 
-  remove_empty("cols")
+age_data <- read_csv("population_age_data.csv")
 ## note on population numbers: estimates 2010-2019, projections 2020-2057
 
 # create dataset of # of 17 year olds in each county
