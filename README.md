@@ -14,7 +14,7 @@ Beatrix Lidl and Bruce Lidl
 
 [Pre-Registration by County and Registration by County, October 22, 2018](https://www.sos.ca.gov/elections/report-registration/15-day-gen-2018) - From the California Secretary of State's office, the report of voter registration broken down by county from October 22, 2018. 
 
-## Directory/Manifest
+## Repository Architecture
 data-clean - contains cleaned versions of data from above sources
 
 data-original - contains original data downloaded from above sources
