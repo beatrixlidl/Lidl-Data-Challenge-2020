@@ -7,7 +7,7 @@ CA Proposition 18 would allow 17 year olds who will be 18 by the time of the gen
 ## Contributors
 Beatrix Lidl and Bruce Lidl
 
-## Data Sources/Definitions
+## Data Sources & Definitions
 [CA County Boundaries](https://data.ca.gov/dataset/ca-geographic-boundaries/resource/b0007416-a325-4777-9295-368ea6b710e6) - From the California Department of Technology, "California County boundaries in shapefile format from the US Census Bureau's 2016 MAF/TIGER database."
 
 [County Population by Age](http://www.dof.ca.gov/Forecasting/Demographics/Projections/) - From the Demographic Research Unit of the California Department of Finance, projected county populations from 2010 to 2060, broken down by age. 
