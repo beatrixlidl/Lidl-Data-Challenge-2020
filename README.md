@@ -1,5 +1,5 @@
 # Lidl-Data-Challenge-2020
-Analyzing Proposition 18 for the UCDavis DataLab CA Election 2020 Data Challenge.
+Analyzing Proposition 18 for the UC Davis DataLab CA Election 2020 Data Challenge.
 
 ## Description
 CA Proposition 18 would allow 17 year olds who will be 18 by the time of the general election to vote in primaries and special elctions. This project attempts to show which counties will be most affected by the passing of this propostion. This project identifies counties that have high concentrations of 17 year olds and/or where young people's political party registration doesn't match the county's broader voting population. 
