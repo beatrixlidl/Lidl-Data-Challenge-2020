@@ -8,6 +8,8 @@ CA Proposition 18 would allow 17 year olds who will be 18 by the time of the gen
 Beatrix Lidl and Bruce Lidl
 
 ## Data Sources & Definitions
+[National Context of 17 Year Old Primary Voting](https://www.ncsl.org/research/elections-and-campaigns/primaries-voting-age.aspx) - From the National Conference of State Legislatures.
+
 [CA County Boundaries](https://data.ca.gov/dataset/ca-geographic-boundaries/resource/b0007416-a325-4777-9295-368ea6b710e6) - From the California Department of Technology, "California County boundaries in shapefile format from the US Census Bureau's 2016 MAF/TIGER database."
 
 [County Population by Age](http://www.dof.ca.gov/Forecasting/Demographics/Projections/) - From the Demographic Research Unit of the California Department of Finance, projected county populations from 2010 to 2060, broken down by age. 
@@ -22,3 +24,5 @@ data-original - contains original data downloaded from above sources
 final_visualizations - contains .png files of maps created in code
 
 prop_18_map_making.R - R script used to create map visualizations
+State-Map_clean.R - R script used to make US state context map
+Preregister-Map_clean.R - R script used to make US preregisteration context map
