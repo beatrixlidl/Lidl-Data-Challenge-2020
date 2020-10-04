@@ -24,5 +24,7 @@ data-original - contains original data downloaded from above sources
 final_visualizations - contains .png files of maps created in code
 
 prop_18_map_making.R - R script used to create map visualizations
+
 State-Map_clean.R - R script used to make US state context map
+
 Preregister-Map_clean.R - R script used to make US preregisteration context map
