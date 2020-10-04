@@ -38,13 +38,13 @@ tmap_mode("plot")
 tm_shape(counties) +
   tm_polygons("pct_17_2018", id = "County",
               palette = "Greens", , style = "cont", title = "Legend") +
-  tm_layout(legend.outside = TRUE, main.title = "% of voting age ")
+  tm_layout(legend.outside = TRUE, main.title = "17 year old % of voting age")
 
 # save above map as html
 ca_map <- tm_shape(counties) +
   tm_polygons("pct_17_2018", id = "County",
               palette = "Greens", , style = "cont", title = "Legend") +
-  tm_layout(legend.outside = TRUE, main.title = "% of voting age ")
+  tm_layout(legend.outside = TRUE, main.title = "17 year old % of voting age")
 tmap_mode("view")
 tmap_last()
 tmap_save(ca_map, "ca_map.html")
